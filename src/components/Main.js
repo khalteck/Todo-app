@@ -106,7 +106,7 @@ export default function Main() {
                             />}
                         </div>
                         <div className={`w-[fit-content] relative ${checked.checked3 && "text-slate-600"}`}>
-                            {checked.checked3 && <div className="w-full h-[1px] bg-slate-600 absolute top-[12px]"></div>}15 minutes meditation</div>
+                            {checked.checked3 && <div className="w-full h-[1px] bg-slate-600 absolute top-[12px]"></div>}10 minutes meditation</div>
      
                 </div>
                     <div className="w-full bg-[#25273c] px-[20px] py-[18px] flex items-center border-b border-slate-700">
