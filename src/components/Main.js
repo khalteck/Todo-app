@@ -23,7 +23,7 @@ export default function Main() {
         setChecked(prevState => {
             return {
                 ...prevState,
-                [id]: true
+                [id]: !prevState[id]
             }
         });
         setCount(prevState => {
