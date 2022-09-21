@@ -126,7 +126,7 @@ export default function Main() {
                                 className="w-[9px] h-[9px]"
                             />}
                         </div>
-                        <div className={`w-[fit-content] mr-auto relative ${darkmode && checked.checked1 ? "text-slate-600" : darkmode ? "text-slate-300" : "text-slate-500"}`}>
+                        <div className={`w-[fit-content] mr-auto relative ${darkmode && checked.checked1 ? "text-slate-500" : !darkmode ? "text-slate-500" : "text-slate-300"}`}>
                             {checked.checked1 && <div className={`w-full h-[1px] bg-slate-600 absolute top-[12px]`}></div>}Complete online Javascript course
                         </div>
                         { hover.hover1 && <div className="cursor-pointer"><img alt="" src={cross}/></div>}
@@ -147,12 +147,12 @@ export default function Main() {
                                 className="w-[9px] h-[9px]"
                             />}
                         </div>
-                        <div className={`w-[fit-content] mr-auto relative ${darkmode && checked.checked2 ? "text-slate-600" : darkmode ? "text-slate-300" : "text-slate-500"}`}>
+                        <div className={`w-[fit-content] mr-auto relative ${darkmode && checked.checked2 ? "text-slate-500" : !darkmode ? "text-slate-500" : "text-slate-300"}`}>
                             {checked.checked2 && <div className={`w-full h-[1px] bg-slate-600 absolute top-[12px]`}></div>}Jog around the park 3x
                         </div>
                         { hover.hover2 && <div className="cursor-pointer"><img alt="" src={cross}/></div>}
                     </div>
-                    <div id="hover3" onMouseOver={handleHover} onMouseOut={handleMouseOut} className={`w-full ${darkmode ? "bg-[#25273c]" : "bg-[#fafafa]"} px-[20px] py-[18px] cursor-pointer flex items-center border-b ${darkmode ? "border-slate-700" : "border-slate-300"} border-slate-700`}>
+                    <div id="hover3" onMouseOver={handleHover} onMouseOut={handleMouseOut} className={`w-full ${darkmode ? "bg-[#25273c]" : "bg-[#fafafa]"} px-[20px] py-[18px] cursor-pointer flex items-center border-b ${darkmode ? "border-slate-700" : "border-slate-300"}`}>
                         <div
                             className={`w-[22px] h-[22px] rounded-full border ${checked.checked3 && "bg-gradient-to-r from-[#57ddff] to-[#c058f3]"} ${darkmode ? "border-slate-600" : "border-slate-300"} mr-[15px] md:mr-[25px] relative flex justify-center items-center cursor-pointer hover:border-t-[#57ddff] hover:border-l-[#57ddff] hover:border-r-[#c058f3] hover:border-b-[#c058f3]`}
                         >
@@ -168,12 +168,12 @@ export default function Main() {
                                 className="w-[9px] h-[9px]"
                             />}
                         </div>
-                        <div className={`w-[fit-content] mr-auto relative ${darkmode && checked.checked3 ? "text-slate-600" : darkmode ? "text-slate-300" : "text-slate-500"}`}>
+                        <div className={`w-[fit-content] mr-auto relative ${darkmode && checked.checked3 ? "text-slate-500" : !darkmode ? "text-slate-500" : "text-slate-300"}`}>
                             {checked.checked3 && <div className={`w-full h-[1px] bg-slate-600 absolute top-[12px]`}></div>}10 minutes meditation
                         </div>
                         { hover.hover3 && <div className="cursor-pointer"><img alt="" src={cross}/></div>}
                     </div>
-                    <div id="hover4" onMouseOver={handleHover} onMouseOut={handleMouseOut} className={`w-full ${darkmode ? "bg-[#25273c]" : "bg-[#fafafa]"} px-[20px] py-[18px] cursor-pointer flex items-center border-b ${darkmode ? "border-slate-700" : "border-slate-300"} border-slate-700`}>
+                    <div id="hover4" onMouseOver={handleHover} onMouseOut={handleMouseOut} className={`w-full ${darkmode ? "bg-[#25273c]" : "bg-[#fafafa]"} px-[20px] py-[18px] cursor-pointer flex items-center border-b ${darkmode ? "border-slate-700" : "border-slate-300"}`}>
                         <div
                             className={`w-[22px] h-[22px] rounded-full border ${checked.checked4 && "bg-gradient-to-r from-[#57ddff] to-[#c058f3]"} ${darkmode ? "border-slate-600" : "border-slate-300"} mr-[15px] md:mr-[25px] relative flex justify-center items-center cursor-pointer hover:border-t-[#57ddff] hover:border-l-[#57ddff] hover:border-r-[#c058f3] hover:border-b-[#c058f3]`}
                         >
@@ -189,12 +189,12 @@ export default function Main() {
                                 className="w-[9px] h-[9px]"
                             />}
                         </div>
-                        <div className={`w-[fit-content] mr-auto relative ${darkmode && checked.checked4 ? "text-slate-600" : darkmode ? "text-slate-300" : "text-slate-500"}`}>
+                        <div className={`w-[fit-content] mr-auto relative ${darkmode && checked.checked4 ? "text-slate-500" : !darkmode ? "text-slate-500" : "text-slate-300"}`}>
                             {checked.checked4 && <div className={`w-full h-[1px] bg-slate-600 absolute top-[12px]`}></div>}Read for 1 hour
                         </div>
                         { hover.hover4 && <div className="cursor-pointer"><img alt="" src={cross}/></div>}
                     </div>
-                    <div id="hover5" onMouseOver={handleHover} onMouseOut={handleMouseOut} className={`w-full ${darkmode ? "bg-[#25273c]" : "bg-[#fafafa]"} px-[20px] py-[18px] cursor-pointer flex items-center border-b ${darkmode ? "border-slate-700" : "border-slate-300"} border-slate-700`}>
+                    <div id="hover5" onMouseOver={handleHover} onMouseOut={handleMouseOut} className={`w-full ${darkmode ? "bg-[#25273c]" : "bg-[#fafafa]"} px-[20px] py-[18px] cursor-pointer flex items-center border-b ${darkmode ? "border-slate-700" : "border-slate-300"}`}>
                         <div
                             className={`w-[22px] h-[22px] rounded-full border ${checked.checked5 && "bg-gradient-to-r from-[#57ddff] to-[#c058f3]"} ${darkmode ? "border-slate-600" : "border-slate-300"} mr-[15px] md:mr-[25px] relative flex justify-center items-center cursor-pointer hover:border-t-[#57ddff] hover:border-l-[#57ddff] hover:border-r-[#c058f3] hover:border-b-[#c058f3]`}
                         >
@@ -210,12 +210,12 @@ export default function Main() {
                                 className="w-[9px] h-[9px]"
                             />}
                         </div>
-                        <div className={`w-[fit-content] mr-auto relative ${darkmode && checked.checked5 ? "text-slate-600" : darkmode ? "text-slate-300" : "text-slate-500"}`}>
+                        <div className={`w-[fit-content] mr-auto relative ${darkmode && checked.checked5 ? "text-slate-500" : !darkmode ? "text-slate-500" : "text-slate-300"}`}>
                             {checked.checked5 && <div className={`w-full h-[1px] bg-slate-600 absolute top-[12px]`}></div>}Pick up groceries
                         </div>
                         { hover.hover5 && <div className="cursor-pointer"><img alt="" src={cross}/></div>}
                     </div>
-                    <div id="hover6" onMouseOver={handleHover} onMouseOut={handleMouseOut} className={`w-full ${darkmode ? "bg-[#25273c]" : "bg-[#fafafa]"} px-[20px] py-[18px] cursor-pointer flex items-center border-b ${darkmode ? "border-slate-700" : "border-slate-300"} border-slate-700`}>
+                    <div id="hover6" onMouseOver={handleHover} onMouseOut={handleMouseOut} className={`w-full ${darkmode ? "bg-[#25273c]" : "bg-[#fafafa]"} px-[20px] py-[18px] cursor-pointer flex items-center border-b ${darkmode ? "border-slate-700" : "border-slate-300"}`}>
                         <div
                             className={`w-[22px] h-[22px] rounded-full border ${checked.checked6 && "bg-gradient-to-r from-[#57ddff] to-[#c058f3]"} ${darkmode ? "border-slate-600" : "border-slate-300"} mr-[15px] md:mr-[25px] relative flex justify-center items-center cursor-pointer hover:border-t-[#57ddff] hover:border-l-[#57ddff] hover:border-r-[#c058f3] hover:border-b-[#c058f3]`}
                         >
@@ -231,7 +231,7 @@ export default function Main() {
                                 className="w-[9px] h-[9px]"
                             />}
                         </div>
-                        <div className={`w-[fit-content] mr-auto relative ${darkmode && checked.checked6 ? "text-slate-600" : darkmode ? "text-slate-300" : "text-slate-500"}`}>
+                        <div className={`w-[fit-content] mr-auto relative ${darkmode && checked.checked6 ? "text-slate-500" : !darkmode ? "text-slate-500" : "text-slate-300"}`}>
                             {checked.checked6 && <div className={`w-full h-[1px] bg-slate-600 absolute top-[12px]`}></div>}Complete Todo App on Frontend Mentor
                         </div>
                         { hover.hover6 && <div className="bursor-pointer"><img alt="" src={cross}/></div>}
