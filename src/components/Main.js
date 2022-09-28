@@ -72,17 +72,6 @@ export default function Main() {
         setDarkmode(prevState => !prevState)
     }
 
-
-    //to delete todo
-    /*const [deleteTodo, setDeleteTodo] = React.useState({
-        "checked1": "active",
-        "checked2": "active",
-        "checked3": "active",
-        "checked4": "active",
-        "checked5": "active",
-        "checked6": "active"
-    })*/
-
     
 
     return (
@@ -147,7 +136,7 @@ export default function Main() {
                                 className="w-[9px] h-[9px]"
                             />}
                         </div>
-                        <div className={`w-[fit-content] mr-auto relative ${darkmode && checked.checked2 ? "text-slate-500" : !darkmode ? "text-slate-500" : "text-slate-300"}`}>
+                        <div className={`w-[fit-content] mr-auto relative ${darkmode && checked.checked2 ? "text-slate-500" : !darkmode && !checked.checked2 ? "text-slate-500" : "text-slate-300"}`}>
                             {checked.checked2 && <div className={`w-full h-[1px] bg-slate-600 absolute top-[12px]`}></div>}Jog around the park 3x
                         </div>
                         { hover.hover2 && <div className="cursor-pointer"><img alt="" src={cross}/></div>}
