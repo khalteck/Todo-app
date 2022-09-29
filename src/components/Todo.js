@@ -27,8 +27,12 @@ export default function Todo(props) {
                 {props.item.completed && <div className={`w-full h-[1px] bg-slate-600 absolute top-[12px]`}></div>}
                 {props.item.text}
             </div>
-            { props.todos[props.index].hover && 
-                <div onClick={() => props.deleteTodo(props.index)} className="cursor-pointer">
+            <div onClick={() => props.deleteTodo(props.index)} className="block sm:hidden cursor-pointer">
+                <img alt="" src={props.cross}/>
+            </div>
+            { 
+                props.todos[props.index].hover && 
+                <div onClick={() => props.deleteTodo(props.index)} className="hidden sm:block cursor-pointer">
                     <img alt="" src={props.cross}/>
                 </div>
             }
