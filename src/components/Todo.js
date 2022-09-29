@@ -23,10 +23,20 @@ export default function Todo(props) {
                     className="w-[9px] h-[9px]"
                 />}
             </div>
-            <div className={`w-[fit-content] mr-auto relative ${ !props.todos[props.index].completed ? "text-slate-300" : props.darkmode && props.item.completed ? "text-slate-500" : !props.darkmode ? "text-slate-500" : "text-slate-300"}`}>
-                {props.item.completed && <div className={`w-full h-[1px] bg-slate-600 absolute top-[12px]`}></div>}
-                {props.item.text}
-            </div>
+            {
+                props.darkmode && 
+                <div className={`w-[fit-content] mr-auto relative ${ !props.todos[props.index].completed ? "text-slate-300" : "text-slate-500"}`}>
+                    {props.item.completed && <div className={`w-full h-[1px] bg-slate-600 absolute top-[12px]`}></div>}
+                    {props.item.text}
+                </div>
+            }
+            {
+                !props.darkmode && 
+                <div className={`w-[fit-content] mr-auto relative ${ !props.todos[props.index].completed ? "text-slate-600" : "text-slate-400"}`}>
+                    {props.item.completed && <div className={`w-full h-[1px] bg-slate-600 absolute top-[12px]`}></div>}
+                    {props.item.text}
+                </div>
+            }
             <div onClick={() => props.deleteTodo(props.index)} className="block sm:hidden cursor-pointer">
                 <img alt="" src={props.cross}/>
             </div>

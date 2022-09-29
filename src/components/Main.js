@@ -8,7 +8,10 @@ import Todo from "./Todo"
 export default function Main() {
 
     //to toggle dark mode on and off
-    const [darkmode, setDarkmode] = React.useState(true)
+    const [darkmode, setDarkmode] = React.useState(JSON.parse(localStorage.getItem("mode")) || true)
+    React.useEffect(() => {
+        localStorage.setItem("mode", JSON.stringify(darkmode))
+    } , [darkmode])
     function handleDisplayMode() {
         setDarkmode(prevState => !prevState)
     }
