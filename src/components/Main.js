@@ -54,7 +54,7 @@ export default function Main() {
     //to mark todo as completed
     function markTodo(index) {
         const newTodos = [...todos];
-        newTodos[index].completed = !newTodos[index].completed;
+        newTodos[index].completed = true;
         setTodos(newTodos);
     };
 
@@ -90,7 +90,7 @@ export default function Main() {
 
     //to add new todo
     function addTodo(text) {
-        const newTodos = [...todos, {text}];
+        const newTodos = [{text}, ...todos];
         setTodos(newTodos);
     };
 
