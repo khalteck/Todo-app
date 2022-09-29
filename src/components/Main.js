@@ -122,7 +122,8 @@ export default function Main() {
     React.useEffect(() => {
         localStorage.setItem("savedTodo", JSON.stringify(todos))
     }, [todos])
-
+    
+    console.log(todos)
     
 
     //to show all todos
@@ -194,6 +195,9 @@ export default function Main() {
                                 />
                             )
                     })}
+                    {todos.length === 0 && <div className="w-full h-[200px] border-b border-slate-700 text-slate-400 flex justify-center items-center">
+                        You have no todo...
+                    </div>}
                     <div className={`w-full ${darkmode ? "bg-[#25273c]" : "bg-[#fafafa]"} px-[20px] py-[18px] flex items-center justify-between text-[0.7rem] md:text-[0.75rem] text-slate-500 rounded-b-md`}>
                         <p>{todos.length} items left</p>
                         <ul className="flex gap-[10px] md:gap-[20px] font-[700]">
