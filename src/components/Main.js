@@ -56,7 +56,6 @@ export default function Main() {
         }
     ]);
 
-
     //to mark todo as completed
     function markTodo(index) {
         const newTodos = [...todos];
@@ -115,7 +114,7 @@ export default function Main() {
             return;
         }
         addTodo(newTodo);
-        //setNewTodo("");
+        //setTodos(savedList[0])
     };
 
 
@@ -127,20 +126,18 @@ export default function Main() {
     
 
     //to show all todos
-    //to show only completed todo
-    function showAll() {
-       // let exist = true;
-        let newTodos = [...todos];
-        //newTodos = todos.filter((obj) => {
-        //    return obj.exist === exist;
-        //});
-        setTodos(newTodos)
+    /*function showAll() {
+        //page = true;
+        //saveList();
+        //let newTodos = [...todos];
+        //setTodos(savedList)
         console.log(todos)
-    }
+    }*/
 
 
     //to show only completed todo
-    function showCompleted() {
+   /* function showCompleted() {
+        //page = false;
         let completed = false;
         let newTodos = [...todos];
         newTodos = newTodos.filter((obj) => {
@@ -148,7 +145,7 @@ export default function Main() {
         });
         setTodos(newTodos)
         console.log(todos)
-    }
+    }*/
 
 
     return (
@@ -180,29 +177,29 @@ export default function Main() {
             {/*bottom half */}
             <div className={`w-full ${darkmode ? "bg-[#181824]" : "bg-[#fafafa]"} flex justify-center px-[20px] md:px-0 pb-[50px]`}>
                 <div className={`w-[500px] ${darkmode ? "bg-[#25273c]" : "bg-[#fafafa]"} rounded-md pt-[5px] rounded-t-md shadow-2xl shadow-black/50 relative top-[-40px]`}>
-                {todos?.map((item, index) => {
-                        return (
-                            <Todo
-                                key={index}
-                                index={index}
-                                item={item}
-                                markTodo={markTodo}
-                                deleteTodo={deleteTodo}
-                                handleHover={handleHover}
-                                handleMouseOut={handleMouseOut}
-                                darkmode={darkmode}
-                                check={check}
-                                cross={cross}
-                                todos={todos}
-                            />
-                        )
-                })}
+                    {todos?.map((item, index) => {
+                            return (
+                                <Todo
+                                    key={index}
+                                    index={index}
+                                    item={item}
+                                    markTodo={markTodo}
+                                    deleteTodo={deleteTodo}
+                                    handleHover={handleHover}
+                                    handleMouseOut={handleMouseOut}
+                                    darkmode={darkmode}
+                                    check={check}
+                                    cross={cross}
+                                    todos={todos}
+                                />
+                            )
+                    })}
                     <div className={`w-full ${darkmode ? "bg-[#25273c]" : "bg-[#fafafa]"} px-[20px] py-[18px] flex items-center justify-between text-[0.7rem] md:text-[0.75rem] text-slate-500 rounded-b-md`}>
                         <p>{todos.length} items left</p>
                         <ul className="flex gap-[10px] md:gap-[20px] font-[700]">
-                            <li onClick={showAll} className="cursor-pointer text-[#438da0] hover:text-slate-300">All</li>
+                            <li className="cursor-pointer text-[#438da0] hover:text-slate-300">All</li>
                             <li className="cursor-pointer hover:text-slate-300">Active</li>
-                            <li onClick={showCompleted} className="cursor-pointer hover:text-slate-300">Completed</li>
+                            <li className="cursor-pointer hover:text-slate-300">Completed</li>
                         </ul>
                         <p className=" cursor-pointer hover:text-slate-300">Clear Completed</p>
                     </div>
