@@ -891,6 +891,11 @@ video {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
+.filter {
+  -webkit-filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+          filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .hover\:border-t-\[\#57ddff\]:hover {
   --tw-border-opacity: 1;
   border-top-color: rgb(87 221 255 / var(--tw-border-opacity));

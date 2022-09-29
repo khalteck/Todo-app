@@ -21,32 +21,38 @@ export default function Main() {
         {
             text: "Complete online Javascript course",
             completed: false,
-            hover: false
+            hover: false,
+            exist: true
         },
         {
             text: "Jog around the park 3x",
             completed: false,
-            hover: false
+            hover: false,
+            exist: true
         },
         {
             text: "10 minutes meditation",
             completed: false,
-            hover: false
+            hover: false,
+            exist: true
         },
         {
             text: "Read for 1 hour",
             completed: false,
-            hover: false
+            hover: false,
+            exist: true
         },
         {
             text: "Pick up groceries",
             completed: false,
-            hover: false
+            hover: false,
+            exist: true
         },
         {
             text: "Complete Todo App on Frontend Mentor",
             completed: false,
-            hover: false
+            hover: false,
+            exist: true
         }
     ]);
 
@@ -90,7 +96,14 @@ export default function Main() {
 
     //to add new todo
     function addTodo(text) {
-        const newTodos = [{text}, ...todos];
+        const newTodos = [
+            {
+                text,
+                completed: false,
+                hover: false
+            },
+            ...todos
+        ];
         setTodos(newTodos);
     };
 
@@ -112,6 +125,32 @@ export default function Main() {
     }, [todos])
 
     
+
+    //to show all todos
+    //to show only completed todo
+    function showAll() {
+       // let exist = true;
+        let newTodos = [...todos];
+        //newTodos = todos.filter((obj) => {
+        //    return obj.exist === exist;
+        //});
+        setTodos(newTodos)
+        console.log(todos)
+    }
+
+
+    //to show only completed todo
+    function showCompleted() {
+        let completed = false;
+        let newTodos = [...todos];
+        newTodos = newTodos.filter((obj) => {
+            return obj.completed !== completed;
+        });
+        setTodos(newTodos)
+        console.log(todos)
+    }
+
+
     return (
         <main className={`w-full min-h-[100vh] ${darkmode ? "bg-[#181824]" : "bg-[#fafafa]"}`}>
             {/*top */}
@@ -161,9 +200,9 @@ export default function Main() {
                     <div className={`w-full ${darkmode ? "bg-[#25273c]" : "bg-[#fafafa]"} px-[20px] py-[18px] flex items-center justify-between text-[0.7rem] md:text-[0.75rem] text-slate-500 rounded-b-md`}>
                         <p>{todos.length} items left</p>
                         <ul className="flex gap-[10px] md:gap-[20px] font-[700]">
-                            <li className="cursor-pointer text-[#438da0] hover:text-slate-300">All</li>
+                            <li onClick={showAll} className="cursor-pointer text-[#438da0] hover:text-slate-300">All</li>
                             <li className="cursor-pointer hover:text-slate-300">Active</li>
-                            <li className="cursor-pointer hover:text-slate-300">Completed</li>
+                            <li onClick={showCompleted} className="cursor-pointer hover:text-slate-300">Completed</li>
                         </ul>
                         <p className=" cursor-pointer hover:text-slate-300">Clear Completed</p>
                     </div>
