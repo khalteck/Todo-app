@@ -3,7 +3,6 @@ import React from "react"
 export default function Todo(props) {
     return (
         <div 
-            id="hover6" 
             onMouseOver={() => props.handleHover(props.index)} 
             onMouseOut={() => props.handleMouseOut(props.index)} 
             className={`w-full ${props.darkmode ? "bg-[#25273c]" : "bg-[#fafafa]"} px-[20px] py-[18px] cursor-pointer flex items-center border-b ${props.darkmode ? "border-slate-700" : "border-slate-300"}`}
